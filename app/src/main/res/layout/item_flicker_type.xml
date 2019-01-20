@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="FlickerListSearchItemBinding">
+
+        <variable
+            name="viewModel"
+            type="com.ubercode.ui.flickerlist.FlickerListItemViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/parent_container"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@android:color/white"
+        tools:ignore="MissingPrefix">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/place_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            app:profileAvatarUrl="@{viewModel.flickerImageUrl}" />
+    </RelativeLayout>
+</layout>
